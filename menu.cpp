@@ -2,6 +2,14 @@
 
 using namespace std;
 
+void signup() {
+
+}
+
+void login() {
+
+}
+
 int main() {
     int answer;
 
