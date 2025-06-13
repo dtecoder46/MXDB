@@ -1,2 +1,2 @@
-g++ -o main main.cpp
-./menu
+g++ -o signup signup.cpp
+./signup
