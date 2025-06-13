@@ -1,2 +1,2 @@
-g++ -o menu menu.cpp
+g++ -o main main.cpp
 ./menu
