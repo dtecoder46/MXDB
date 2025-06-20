@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <random>
 
 using namespace std;
 
@@ -46,7 +47,13 @@ int main() {
 
     // store_passwords() start
 
-    int dec_array[] = {};
+    // generates random number from 1000 to 9999
+
+    default_random_engine generator;
+    uniform_int_distribution<int> distribution(1000,9999);
+    int random_num = distribution(generator);
+
+    cout << random_num;
 
     for (int index = 0; index < password.length(); index++) {
         char pass_char = password[index];
@@ -56,7 +63,7 @@ int main() {
         decimnal value for '0' (48) is added back 
         to get the decimal value for the password character */
 
-        dec_array[index] = decimal;
+        int new_decimal = decimal + random_num; // the random number is added to the decimal values to confuse hackers
     }
 
 }
