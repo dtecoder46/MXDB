@@ -46,6 +46,8 @@ int main() {
 
     // store_passwords() start
 
+    int dec_array[] = {};
+
     for (int index = 0; index < password.length(); index++) {
         char pass_char = password[index];
 
@@ -54,7 +56,7 @@ int main() {
         decimnal value for '0' (48) is added back 
         to get the decimal value for the password character */
 
-        cout << decimal;
+        dec_array[index] = decimal;
     }
 
 }
