@@ -15,6 +15,8 @@ int main() {
     cout << "\nEnter your password: ";
     cin >> password;
 
+    // store_usernames() start
+
     ifstream json("usernames.json");
 
     while (getline (json, previous_content)) {
@@ -39,4 +41,20 @@ int main() {
     json2 << json_str; // stores the usernames into JSON
 
     json2.close();
+
+    // store_usernames() end
+
+    // store_passwords() start
+
+    for (int index = 0; index < password.length(); index++) {
+        char pass_char = password[index];
+
+        int decimal = (pass_char - '0') + 48; 
+        /* password character converted to decimal format by subtracing '0', 
+        decimnal value for '0' (48) is added back 
+        to get the decimal value for the password character */
+
+        cout << decimal;
+    }
+
 }
