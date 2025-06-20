@@ -47,10 +47,16 @@ int main() {
 
     // store_passwords() start
 
-    // generates random number from 1000 to 9999
+    // generates random number from 1000 to 897
 
     default_random_engine generator;
-    uniform_int_distribution<int> distribution(1000,9999);
+    uniform_int_distribution<int> distribution(100,897); 
+
+    /*
+    max random number is 897, which limits the biggest possible new_decimal value to reach 512, 
+    the limit I set for the list of powers of 2 used to convert to binary 
+    */ 
+
     int random_num = distribution(generator);
 
     cout << random_num;
@@ -64,6 +70,15 @@ int main() {
         to get the decimal value for the password character */
 
         int new_decimal = decimal + random_num; // the random number is added to the decimal values to confuse hackers
+
+        // binary conversion
+
+        /*
+        Algorithm:
+        1. 
+        */
+
+        
     }
 
 }
