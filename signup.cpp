@@ -59,7 +59,9 @@ int main() {
 
     int random_num = distribution(generator);
 
-    cout << random_num;
+    string binary = "";
+
+    int power2[10] = {512, 256, 128, 64, 32, 16, 8, 4, 2, 1};
 
     for (int index = 0; index < password.length(); index++) {
         char pass_char = password[index];
@@ -75,10 +77,21 @@ int main() {
 
         /*
         Algorithm:
-        1. 
+        1. Loop over the powers of 2 list
+        2. if new_decimal > power of 2, add 1 to the binary string, else add 0
+        3. Repeat
         */
 
-        
+        for (int p2 : power2) {
+            if (new_decimal > p2) {
+                binary += "1 ";
+            }
+            else {
+                binary += "0 ";
+            }
+        }
+
+        binary += "\n";
     }
 
 }
