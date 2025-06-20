@@ -26,7 +26,9 @@ int main() {
     previous_content2.replace(0,1,""); 
     previous_content2.replace(previous_content2.length()-1,1,"");
 
-    char id = previous_content2[5] + 1;
+    char id = previous_content2[5] + 1; // temporary
+
+    // integrating the username data into the JSON syntax
 
     string new_content = previous_content2 + ",\t\"" + id + "\": \"" + username + "\"";
 
@@ -34,7 +36,7 @@ int main() {
 
     ofstream json2("usernames.json");
 
-    json2 << json_str;
+    json2 << json_str; // stores the usernames into JSON
 
     json2.close();
 }
