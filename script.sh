@@ -1,2 +1,2 @@
-g++ -o signup signup.cpp
-./signup
+g++ -o main main.cpp
+./main

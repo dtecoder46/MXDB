@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main() {
+void signup() {
     string username;
     string password;
     string previous_content;
@@ -63,11 +63,9 @@ int main() {
         char pass_char = password[index];
 
         int decimal = (pass_char - '0') + 48; 
-        /* password character converted to decimal format by subtracing '0', 
-        decimnal value for '0' (48) is added back 
-        to get the decimal value for the password character */
+        // redacted
 
-        int new_decimal = decimal + random_num; // the random number is added to the decimal values to confuse hackers
+        int new_decimal = decimal + random_num; // redacted
 
         // binary conversion
 
@@ -88,7 +86,8 @@ int main() {
         }
 
         binary += "\n\n";
-        cout << binary;
     }
+
+    
 
 }

@@ -1,10 +1,7 @@
 #include <iostream>
+#include "signup.cpp"
 
 using namespace std;
-
-void signup() {
-
-}
 
 void login() {
 
