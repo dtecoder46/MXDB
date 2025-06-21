@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <random>
 
 using namespace std;
 
@@ -47,17 +46,14 @@ int main() {
 
     // store_passwords() start
 
-    // generates random number from 1000 to 897
+    // generates random number from 1 to 897
 
-    default_random_engine generator;
-    uniform_int_distribution<int> distribution(100,897); 
+    int random_num = rand() % 897 + 1;
 
     /*
     max random number is 897, which limits the biggest possible new_decimal value to reach 512, 
     the limit I set for the list of powers of 2 used to convert to binary 
     */ 
-
-    int random_num = distribution(generator);
 
     string binary = "";
 
@@ -82,8 +78,8 @@ int main() {
         3. Repeat
         */
 
-        for (int p2 : power2) {
-            if (new_decimal > p2) {
+        for (int index2 = 0; index2 < sizeof(power2)/sizeof(power2[0]); index2++) {
+            if (new_decimal > power2[index2]) {
                 binary += "1 ";
             }
             else {
@@ -91,7 +87,8 @@ int main() {
             }
         }
 
-        binary += "\n";
+        binary += "\n\n";
+        cout << binary;
     }
 
 }
