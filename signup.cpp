@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include "dec2bin.cpp"
 
 using namespace std;
 
@@ -76,14 +77,7 @@ void signup() {
         3. Repeat
         */
 
-        for (int index2 = 0; index2 < sizeof(power2)/sizeof(power2[0]); index2++) {
-            if (new_decimal > power2[index2]) {
-                binary += "1 ";
-            }
-            else {
-                binary += "0 ";
-            }
-        }
+        binary = dec2bin(new_decimal, binary, power2);
 
         binary += "\n\n";
     }
